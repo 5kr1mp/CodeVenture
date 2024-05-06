@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeVenture</title>
+    <link rel="icon" type="x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/quiz.css">
+    <script src="dependencies/jquery-3.7.1.js"></script>
+    <script src="scripts/db.js"></script>
+    <script src="scripts/quiz.js"></script>
+</head>
+<body>
+    <header>
+        <h1 id="activityName">Quiz Name</h1>
+        <div></div>
+        <a href="/course.html"><svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"><path fill="currentColor" d="M4 21V9l8-6l8 6v12h-6v-7h-4v7z"/></svg></a>
+    </header>
+    <div id="quiz">
+        <div id="top-container">
+            <p><span id="current-item">1</span></p>
+            <h2 id="question">Quiz...</h2>
+        </div>
+        <div id="choices">
+            <button class="choice a">Choice...</button>
+            <button class="choice b">Choice...</button>
+            <button class="choice c">Choice...</button>
+        </div>
+        <div id="bottom-container">
+            <button hidden id="next">Next</button>
+        </div>
+    </div>
+</body>
+</html>

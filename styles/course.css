@@ -1,0 +1,119 @@
+/* Course info styles */
+.course-info{
+    padding: 20px 15%;
+    background-color: var(--primary-color);
+    border-bottom: 2px solid var(--dark);
+}
+
+.course-info p{
+    font-size: .95em;
+    margin: 5px 0 10px;
+}
+
+.course-info div{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.course-info button{
+    font-size: 1.1em;
+    width: 9em;
+    padding: 7px 15px;
+    color: white;
+    background-color: var(--dark);
+}
+
+.course-info span:not(.course-progress){
+    width: 100%;
+}
+
+.course-info span:not(.course-progress) p{
+    margin: 0;
+}
+
+.course-info meter{
+    width: 100%;
+    height: 20px;
+    
+}
+
+#continue:hover , #review:hover{
+    transform: scale(1.1);
+}
+/* End of course info styles*/
+/*Activity Styles*/
+#activities{
+    margin-top: 2em;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.activity{
+    width: 40em;
+    padding: 10px 20px;
+    margin-bottom:2.5em ;
+    text-align: start;
+    background-color: var(--dark);
+    color: white;
+    border: 1px solid white;
+    outline: 3px solid var(--dark);
+}
+
+.activity.completed{
+    background-color: var(--secondary-color);
+    color: var(--dark);
+    outline: 3px solid var(--dark);
+    border: 1px solid var(--dark);
+}
+
+.activity > *{
+    display: inline;
+}
+
+.activity > h1:not(h1:first-of-type){
+    float: inline-end;
+}
+
+.activity:hover{
+    background-color: var(--primary-color);
+    color: var(--dark);
+    outline: 3px solid var(--dark);
+    border: 1px solid var(--dark);
+}
+
+.activity.locked{
+    background-color: gray;
+    outline-color: gray;
+}
+
+
+.activity.locked:hover{
+    background-color: gray;
+    outline-color: gray;
+    border-color: white;
+    color: white;
+}
+
+meter::-webkit-meter-optimum-value{
+    background-color: var(--secondary-color);
+}
+
+meter::-webkit-meter-bar{
+    border: 2px solid var(--dark);
+    -webkit-m: var(--secondary-color);
+    height: 1em;
+
+}
+
+
+@media screen and (max-width:600px) {
+    .activity{
+        width: 80%;
+    }
+
+    h1{
+        font-size: 24px;
+    }
+}

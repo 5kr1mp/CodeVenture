@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeVenture</title>
+    <link rel="icon" type="x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/course.css">
+    <script src="dependencies/jquery-3.7.1.js"></script>
+    <script src="scripts/db.js"></script>
+    <script src="scripts/course.js"></script>
+</head>
+<body>
+    <header>
+        <a href="home.html"><img src="assets/Logo.png"></a>
+        <a href="home.html">Courses</a>
+        <div></div>
+        <p></p>
+        <p></p>
+    </header>
+    <div id="main">
+        <div class="course-info">
+            <h1 id="course-name"></h1>
+            <p id="course-desc"></p>
+            <div>
+                <button id="continue">Continue</button>
+                <!-- <button id="review">Review</button> -->
+                <span>
+                    <p>Progress: <span id="course-progress">0</span>%</p>
+                    <meter min="0"
+                    max="100"/>
+                </span>
+            </div>
+        </div>
+        <div id="activities">
+        </div>
+    </div>
+    <!-- <div hidden id="congratulations">
+        <div id="container">
+            <h1>Congratulations on completing the <span class="course-name"></span> course!</h1>
+            <p>You can check out other courses in the home page</p>
+            <button id="close-window">close window</button>
+        </div>
+    </div> -->
+    <!-- <footer>
+        <img src="assets/Logo.png">
+        <h2>Contact Details</h2>
+        <p>Email: codeventureorg@gmail.com</p>
+        <p>Contact No.: 09635939967</p>
+    </footer> -->
+</body>
+</html>

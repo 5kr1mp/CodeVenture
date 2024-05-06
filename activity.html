@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeVenture</title>
+    <link rel="icon" type="x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/activity.css">
+    <script src="dependencies/jquery-3.7.1.js"></script>
+    <script src="scripts/db.js"></script>
+    <script src="scripts/activity.js"></script>
+
+</head>
+</head>
+<body>
+    <header>
+        <h1 id="activityName">Activity Name</h1>
+        <div></div>
+        <button id="back-to-course"><svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"><path fill="currentColor" d="M4 21V9l8-6l8 6v12h-6v-7h-4v7z"/></svg></button>
+    </header>
+    <div id="main">
+        <div id="text">
+            <h3 id="instructions"></h3>
+        </div>
+        <div id="activity">
+            <div>
+                <div class="line"></div>
+                <div id="example">
+                    <!-- <p><span>fsadfs</span><span class="blank"><button class="choice">fdasfs</button></span></p> -->
+                </div>
+            </div>
+            <div id="choices-container">
+                <h1 hidden id="response"></h1>
+                <h2>Choices</h2>
+                <iframe hidden src="https://lottie.host/embed/de239f13-5dae-4ffd-8f6a-7d97c8dbe193/hBJGUUExde.json"></iframe>
+                <div id="choices">
+                </div>
+                <div>
+                    <button id="check">Check</button>
+                </div>
+                <button hidden id="continue">Continue</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
