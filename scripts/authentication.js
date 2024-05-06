@@ -42,7 +42,7 @@ async function createNewUser(code){
 
     fetch(USERS_URL,{
         method: 'POST',
-        body: JSON.stringify(user)
+        body: user
     })
 }
 
