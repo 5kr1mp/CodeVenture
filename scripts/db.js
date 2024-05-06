@@ -1,5 +1,5 @@
-const USERS_URL = 'https://codeventure-data.vercel.app/users/'
-const COURSES_URL = 'https://codeventure-data.vercel.app/courses/'
+const USERS_URL = 'https://codeventure-data.onrender.com/users/'
+const COURSES_URL = 'https://codeventure-data.onrender.com/courses/'
 
 const progress = {
     getUserURL : function(){return USERS_URL+localStorage.getItem("user-id")},
