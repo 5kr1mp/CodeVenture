@@ -27,20 +27,22 @@ const progress = {
     },
     updateCourseProgress : async function(course){
         try{
-            const response = await fetch(this.getUserURL())
-            const user = await response.json()
-            user['user courses'].find(function(userCourse){
-                return userCourse['course name'] == course['name']
-            })
-            ['progress']
-            ['activities completed']++
-        
-            fetch(this.getUserURL(),{
-                method:"PUT",
-                headers: {
-                    "Content-Type":"application/json"
-                },
-                body: JSON.stringify(user)
+            fetch(this.getUserURL())
+            .then(res => res.json())
+            .then(user => {
+                user['user courses'].find(function(userCourse){
+                    return userCourse['course name'] == course['name']
+                })
+                ['progress']
+                ['activities completed']++
+            
+                return fetch(this.getUserURL(),{
+                    method: "PUT",
+                    headers: {
+                        "Content-Type":"application/json"
+                    },
+                    body: JSON.stringify(user)
+                })
             })
         } catch (e){
             console.error("ERROR")
@@ -49,19 +51,21 @@ const progress = {
     },
     updateQuizScore : async function(score, course){
         try{
-            const response = await fetch(this.getUserURL())
-            const user = await response.json()
-            user['user courses'].find(function(userCourse){
-                return userCourse['course name'] == course['name']
-            })
-            ['progress']['quiz score'] = score
-    
-            fetch(this.getUserURL(),{
-                method:"PUT",
-                headers: {
-                    "Content-Type":"application/json"
-                },
-                body: JSON.stringify(user)
+            fetch(this.getUserURL())
+            .then(res => res.json())
+            .then(user => {
+                user['user courses'].find(function(userCourse){
+                    return userCourse['course name'] == course['name']
+                })
+                ['progress']['quiz score'] = score
+        
+                return fetch(this.getUserURL(),{
+                    method:"PUT",
+                    headers: {
+                        "Content-Type" : "application/json"
+                    },
+                    body: JSON.stringify(user)
+                })
             })
         } catch (e){
             console.error("ERROR")
@@ -96,12 +100,5 @@ const webContent = {
             const c = await webContent.getCourse()
             return c['activities'][activityIndex]
         }
-    },
-    quiz : {
-
-    },
-}
-
-const auth = {
-
+    }
 }
