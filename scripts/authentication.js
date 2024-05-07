@@ -42,7 +42,7 @@ async function createNewUser(users, code){
     localStorage.setItem('user-id',newID)
 
     fetch(USERS_URL,{
-        method: 'POST',
+        method: "POST",
         body: JSON.stringify(user)
     })
 }
