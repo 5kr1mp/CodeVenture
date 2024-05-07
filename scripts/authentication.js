@@ -43,6 +43,9 @@ async function createNewUser(users, code){
 
     fetch(USERS_URL,{
         method: "POST",
+        headers: {
+            "Content-Type" : "application/json"
+        }
         body: JSON.stringify(user)
     })
 }
