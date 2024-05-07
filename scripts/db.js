@@ -36,7 +36,10 @@ const progress = {
             ['activities completed']++
         
             fetch(this.getUserURL(),{
-                method:'PUT',
+                method:"PUT",
+                headers: {
+                    "Content-Type":"application/json"
+                },
                 body: JSON.stringify(user)
             })
         } catch (e){
@@ -54,7 +57,10 @@ const progress = {
             ['progress']['quiz score'] = score
     
             fetch(this.getUserURL(),{
-                method:'PUT',
+                method:"PUT",
+                headers: {
+                    "Content-Type":"application/json"
+                },
                 body: JSON.stringify(user)
             })
         } catch (e){
