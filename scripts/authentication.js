@@ -54,14 +54,16 @@ $(document).ready(()=>{
     const container = $("#container") 
     
 
-    btnSubmit.on('click', ()=>{
+    btnSubmit.on('click', async()=>{
         const accessCode = code.val()
         if(accessCodes.includes(accessCode)){
-            logIn(accessCode)
-            container.addClass('accept')
-            setTimeout(()=>{
-                window.location.assign('home.html')
-            },1000)
+            await logIn(accessCode)
+            .then(()=>{
+                container.addClass('accept')
+                setTimeout(()=>{
+                    window.location.assign('home.html')
+                },1000)
+            })
         } else {
             code.addClass('error')
             label.addClass('error')
