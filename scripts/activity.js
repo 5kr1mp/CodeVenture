@@ -76,6 +76,7 @@ async function loadActivity(){
                 })
         )
     })
+    checkBtn.show()
 }
 function showPopup(isCorrect){
     var audio;
@@ -114,30 +115,21 @@ checkBtn.on('click',function(){
     })
     showPopup(correct)
 })
-continueBtn.on('click',function(){
-    completeActivity()
+continueBtn.on('click',async function(){
+    progress.updateCourseProgress(userProgress,course)
     .then(()=>{
         if(nextActivityIndex < activities.length){
             localStorage.setItem('current-activity-index',nextActivityIndex)
             if(nextActivity['type']==0){
                 location.reload()
-                console.log("Type 0")
             } else {
                 location.replace('quiz.html')
-                console.log("type 1")
             }
         } else {
             location.replace('course.html')
-            console.log("ELSE")
         }
     })
 })
-
-async function completeActivity(){
-    if(userProgress < parseInt(localStorage.getItem('current-activity-index'))+1){
-        await progress.updateCourseProgress(course)
-    }
-}
 
 $("#back-to-course").on('click',function(){
     location.replace('course.html')

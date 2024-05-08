@@ -75,7 +75,7 @@ nextBtn.on('click',async function(){
         console.log(questionIndex < currentActivity['questions'].length)
         await loadQuiz()
     } else {
-        await progress.updateQuizScore(score,course)
+        progress.updateQuizScore(score,course)
         .then(()=>{
             goToNextActivity()
         })
@@ -96,19 +96,13 @@ function goToNextActivity(){
     // }
 }
 
-async function completeActivity(){
-    if(userProgress < parseInt(localStorage.getItem('current-activity-index'))+1){
-        await progress.updateCourseProgress(course)
-    }
-}
-
 async function congratulate(){
     $("body").append(
         $('<div hidden id="congratulations"><div id="container"><h1>Congratulations on completing the <span class="course-name"></span> course!</h1><p>You can check out other courses in the home page</p><button id="close-window">close window</button></div>')
     )
     $("#congratulations").show()
     $("#close-window").click(async()=>{
-        await completeActivity()
+        progress.updateCourseProgress(userProgress,course)
         .then(()=>{
             window.location.replace('course.html')
         })

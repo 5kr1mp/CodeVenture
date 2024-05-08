@@ -196,6 +196,8 @@ iframe{
 #response.wrong {
     animation: shake var(--ease-elastic-in-1) 300ms infinite alternate;
     font-size: 3em;
+    width: fit-content;
+    margin: auto;
 }
 
 @keyframes shake {
