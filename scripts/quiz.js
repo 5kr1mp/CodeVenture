@@ -50,7 +50,7 @@ function check(index){
     let correctAnswer = currentActivity['correct answers'][questionIndex]
     let audio;
     if (correctAnswer == index){
-        audio = new Audio('/assets/correct-quiz.mp3')
+        audio = new Audio('assets/correct-quiz.mp3')
         audio.play()
         $(choicesBtn[index]).addClass("correct")
         choicesBtn.each((i,e) => {
@@ -60,7 +60,7 @@ function check(index){
         score++;
         // console.log(score)
     } else {
-        audio = new Audio('/assets/wrong-quiz.mp3')
+        audio = new Audio('assets/wrong-quiz.mp3')
         audio.play()
         $(choicesBtn[index]).addClass("wrong")
         choicesBtn.each((i,e) => {
