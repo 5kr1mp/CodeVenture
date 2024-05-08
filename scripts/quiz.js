@@ -44,6 +44,7 @@ async function loadQuiz(){
     } else {
         nextBtn.text("Next")
     }
+    nextBtn.hide()
 }
 function check(index){
     let correctAnswer = currentActivity['correct answers'][questionIndex]
