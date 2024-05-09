@@ -41,6 +41,7 @@ meter::-webkit-meter-bar{
 
 #company-logo{
     width: 90%;
+    max-width: 60em;
     margin-bottom: 2em;
 }
 /* end of headline styles*/

@@ -1,0 +1,38 @@
+body{
+    background-image: linear-gradient(180deg,var(--dark)30%,#48436e);
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    color: white;
+
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+}
+
+body>div{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    margin: 0.5em;
+}
+
+img{
+    width: 90%;
+    max-width: 60em;
+}
+
+h1{
+    color: var(--primary-color);
+    -webkit-text-stroke: 1px var(--dark);
+    margin-top: 1.5em;
+}
+
+p{
+    text-align: center;
+    margin: 0.3em 1em;
+}
