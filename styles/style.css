@@ -100,6 +100,7 @@ footer h2{
 @media screen and (max-width: 600px) {
     header a{
         margin: 0 1em;
+        max-width: 10em;
     }
 
     header p{

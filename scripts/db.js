@@ -7,15 +7,11 @@ const progress = {
         const currCourse = await this.getCurrentCourse(course)
         const userProgress = currCourse['progress']['activities completed']
         const activityNum = course['activities'].length
-        // console.log(currCourse['progress']['activities completed'])
-        // console.log("uProgress: "+userProgress)
-        // console.log("Activity Num: "+activityNum)
         return Math.floor(userProgress / activityNum * 100)
     },
     getCurrentCourse : async function(course){
         const response = await fetch(this.getUserURL())
         const user = await response.json();
-        // console.log(course)
         return user['user courses']
             .find(function(userCourse){
                 return userCourse['course name'] == course['name']
@@ -35,7 +31,6 @@ const progress = {
                     })
                     ['progress']
                     ['activities completed']++
-                    console.log(user)
                     return fetch(this.getUserURL(),{
                         method: "PUT",
                         headers: {

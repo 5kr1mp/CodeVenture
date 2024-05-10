@@ -28,20 +28,15 @@ async function loadCourse(){
     });
     
     $(".activity").each((index,element)=>{
-        console.log(index +" : "+userProgress)
         if(index<userProgress){
-            console.log(index +" : "+userProgress)
             $(element).addClass("completed")
             $(element).removeClass("locked")
         } else if (index == userProgress){
-            console.log(index +" : "+userProgress)
             $(element).removeClass("locked")
             $(element).removeClass("completed")
         } else {
-            console.log(index +" : "+userProgress)
             $(element).removeClass("completed")
             $(element).addClass("locked").off()
-            
         }
     })
 }

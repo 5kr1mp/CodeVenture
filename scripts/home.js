@@ -9,7 +9,6 @@ $(document).ready(()=>{
             let currProgress = await progress.getCourseProgress(courses[i])
             progressList.push(currProgress)
         }
-        // console.log(progressList)
         courses.forEach((course,index) => {
             progressList.push(progress.getCourseProgress(course))
             $("#courses").append(createCourseItemElement(course,index,progressList))

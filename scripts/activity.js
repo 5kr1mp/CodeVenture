@@ -14,7 +14,6 @@ let userProgress;
 let nextActivity;
 let nextActivityIndex
 let activities;
-
 async function loadActivity(){
     $("dotlottie-player").hide()
     //instantiate values
@@ -25,7 +24,6 @@ async function loadActivity(){
     course = await webContent.getCourse()
     currCourse = await progress.getCurrentCourse(course)
     userProgress = currCourse['progress']['activities completed']
-
     //page title
     $("title").text($("title").text()+" - "+ await webContent.course.getCourseName())
     //Activity name
@@ -130,7 +128,6 @@ continueBtn.on('click',async function(){
         }
     })
 })
-
 $("#back-to-course").on('click',function(){
     location.replace('course.html')
 })
