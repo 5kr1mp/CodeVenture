@@ -41,7 +41,7 @@ input, label{
     font-family: 'Trebuchet MS';
 }
 
-input[type="text"]{
+input[type="password"]{
     border: 3px solid var(--dark);
     padding: 0.3em 1em;
 }
@@ -64,7 +64,7 @@ input[type="text"]{
     }
 }
 
-input[type="text"].error{
+input[type="password"].error{
     animation: shake var(--ease-elastic-in-1) 300ms infinite alternate;
     background-color: var(--wrong);
 }
